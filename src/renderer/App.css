@@ -1,62 +1,25 @@
-/*
- * @NOTE: Prepend a `~` to css file paths that are in your node_modules
- *        See https://github.com/webpack-contrib/sass-loader#imports
- */
-body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
-  font-family: sans-serif;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: var(--tipografiaGeneral);
 }
 
-button {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  appearance: none;
-  font-size: 1.3rem;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
-    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
-  transition: all ease-in 0.1s;
-  cursor: pointer;
-  opacity: 0.9;
+/* Variables CSS */
+:root {
+  /* Tipografias */
+  --tipografiaGeneral: 'Jost', Arial, sans-serif;
+  /* Colores */
+  --midnight-blue: #2c3e50; /* Para el fondo principal */
+  --gunmetal: #2a2d34; /* Para el encabezado y el pie de página */
+  --charcoal: #333333; /* Para las secciones y contenedores secundarios */
+  --shadow-blue: #778899; /* Para botones y enlaces activos */
+  --jet: #343a40; /* Para el texto principal */
+  --iron: #d1d5db; /* Para el texto secundario */
+  --crimson-red: #dc143c; /* Para acentos y elementos interactivos como botones y enlaces */
 }
 
-button:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  height: fit-content;
-  width: fit-content;
-  margin: 10px;
-}
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.Hello {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
+/* NavBar */

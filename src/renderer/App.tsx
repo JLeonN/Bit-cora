@@ -1,13 +1,14 @@
+import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Nav from '../Componentes/NavBar/Nav';
-import './App.css';
+import Estructura from '../Estructura';
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
             <Nav />
-            {/* <Estructura /> */}
+            <Estructura />
       </BrowserRouter>
     </>
   );

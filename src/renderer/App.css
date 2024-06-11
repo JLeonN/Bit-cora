@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); /* Tipografias */
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: var(--tipografiaGeneral);
+  font-family: var(--tipografiaGeneral); /* Tipografias */
 }
 
 /* Variables CSS */
@@ -13,13 +13,122 @@
   /* Tipografias */
   --tipografiaGeneral: 'Jost', Arial, sans-serif;
   /* Colores */
-  --midnight-blue: #2c3e50; /* Para el fondo principal */
-  --gunmetal: #2a2d34; /* Para el encabezado y el pie de página */
-  --charcoal: #333333; /* Para las secciones y contenedores secundarios */
-  --shadow-blue: #778899; /* Para botones y enlaces activos */
-  --jet: #343a40; /* Para el texto principal */
-  --iron: #d1d5db; /* Para el texto secundario */
-  --crimson-red: #dc143c; /* Para acentos y elementos interactivos como botones y enlaces */
+  --TituloH1: #4682b4;
+  --FondoBody: #2a2d34;
+  --Texto: #d3d3d3;
+  --TextoLink: #5f9ea0; /* Para botones y enlaces activos */
+  --Hover: #b22222; /* Para acentos y elementos interactivos como botones y enlaces */
+  --slate-gray: #708090; /* Para las secciones y contenedores secundarios */
+  --dim-gray: #696969; /* Para el texto principal */
 }
 
-/* NavBar */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---CSS general--- */
+
+body {
+  background-color: var(--FondoBody);
+}
+
+/* Los titulos o H... */
+
+/* Eliminar el estilo de lista predeterminado y otros estilos */
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+  margin-bottom: -30px;
+}
+/* Estilo para los enlaces */
+a {
+  text-decoration: none;
+  color: var(--TextoLink);
+  transition: color 0.5s ease;
+}
+/* Efecto hover para los enlaces */
+a:hover {
+  color: var(--Hover);
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---NavBar--- */
+
+.logo {
+  background-image: url(/src/Imagenes/LogoBrújula.png);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -22px;
+}
+.logo:hover {
+  animation: rotate-scale-up 0.4s linear both;
+}
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+h1 {
+  color: var(--TituloH1);
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 2.6rem;
+}
+/* Imagen de fondo */
+.backgroundImage {
+  background-image: url('/src/Imagenes/Cuaderno.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+.menu {
+  font-size: 1.4rem;
+}
+/* Responsividad 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  .menu {
+    font-size: 1.2rem;
+    gap: 0.5rem;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem;
+    margin-bottom: -30px;
+  }
+  .menu li {
+    margin-right: 2rem;
+  }
+  .logo {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+/* Responsividad 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+  }
+  .menu {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+/* --------------------------------------------------------------------------------------------------------------- */

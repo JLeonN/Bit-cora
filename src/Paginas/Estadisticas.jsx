@@ -1,7 +1,12 @@
+import Meses from '../Componentes/Meses/Meses';
+
 const Estadisticas = () => {
   return (
     <>
-    <p>Estadisticas</p>
+      <h2 className="titulo">Meses del año</h2>
+      <dir className="contenedor">
+        <Meses />
+      </dir>
     </>
   );
 };

@@ -4,12 +4,10 @@ const Nav = () => {
   return (
     <>
       <nav className="navbar backgroundImage">
-        <div className="logo">
-        <Link to="/"></Link>
-        </div>
+        <div className="logo"></div>
         <div className="">
           <h1>Bitácora</h1>
-          <ul className='menu'>
+          <ul className="menu">
             <li>
               <Link to="/estadisticas">Estadísticas</Link>
             </li>

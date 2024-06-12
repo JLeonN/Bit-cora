@@ -254,3 +254,68 @@ table.TablaDias tbody tr:hover {
   font-size: 0.7rem;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+
+/* Formulario */
+
+.detalleForm {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--Secciones1);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: var(--Texto);
+}
+.grupoFormulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.grupoFormulario label {
+  margin-bottom: 5px;
+}
+.grupoFormulario input,
+.grupoFormulario textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.grupoFormulario textarea {
+  resize: vertical;
+}
+input:focus {
+  border: 1px solid var(--Hover);
+}
+textarea:focus {
+  border: 1px solid var(--Hover);
+}
+button {
+  padding: 10px 15px;
+  background-color: var(--Secciones2);
+  color: var(--Texto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--Texto);
+  color: var(--Hover);
+}
+/* Responsividad 600px */
+@media (max-width: 600px) {
+  .detalleForm {
+    padding: 15px;
+  }
+  .grupoFormulario input,
+  .grupoFormulario textarea {
+    padding: 8px;
+  }
+  button {
+    padding: 8px 12px;
+  }
+}

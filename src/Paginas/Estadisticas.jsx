@@ -1,3 +1,4 @@
+import Formulario from '../Componentes/Agregar/Formulario';
 import Dias from '../Componentes/Meses/Días/Dias';
 import Meses from '../Componentes/Meses/Meses';
 
@@ -11,6 +12,9 @@ const Estadisticas = () => {
       <section>
         <Dias />
       </section>
+      <div>
+        <Formulario />
+      </div>
     </>
   );
 };

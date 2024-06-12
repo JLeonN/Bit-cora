@@ -1,9 +1,11 @@
 const Dias = () => {
   return (
     <>
-      <h2 className="titulo">Día del mes</h2>
+      <h2 className="titulo">
+        Días del mes <span></span>
+      </h2>
       <dir className="contenedor">
-        <table class="TablaDias">
+        <table className="TablaDias">
           <thead>
             <tr>
               <th>Día</th>

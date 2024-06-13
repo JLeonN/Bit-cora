@@ -1,4 +1,4 @@
-const DiasTabla = ({ diaDeHoy, mesx, diaDeTrabajo, pedidos, items, negados }) => {
+const DiasTabla = ({ diaDeHoy, mes, diaDeTrabajo, pedidos, items, negados }) => {
   return (
     <>
       <h2 className="titulo">
@@ -8,7 +8,7 @@ const DiasTabla = ({ diaDeHoy, mesx, diaDeTrabajo, pedidos, items, negados }) =>
         <table className="TablaDias">
           <thead>
             <tr>
-              <th>Día del <span>{mesx}</span></th>
+              <th>Días de <span>{mes}</span></th>
               <th>Cantidad de pedidos</th>
               <th>Cantidad de ítems</th>
               <th>Ítems negados</th>

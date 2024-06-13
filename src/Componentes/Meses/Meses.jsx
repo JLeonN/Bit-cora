@@ -81,7 +81,7 @@ const Meses = () => {
         </section>
       </div>
       <section>
-        <DiasTabla mesx={Meses} />
+        <DiasTabla mes={mesSeleccionado} />
       </section>
     </>
   );

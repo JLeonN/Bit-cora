@@ -1,69 +1,87 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import DiasTabla from './Días/DiasTabla';
 
 const Meses = () => {
+  const [mesSeleccionado, setMesSeleccionado] = useState('');
+
+  const manejarClicMes = (mes) => {
+    setMesSeleccionado(mes);
+  };
+
   return (
     <>
-      <section className="meses12">
-        <div className="mes">
-          <Link to="/enero" className="boxMes">
-            Enero
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/febrero" className="boxMes">
-            Febrero
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/marzo" className="boxMes">
-            Marzo
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/abril" className="boxMes">
-            Abril
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/mayo" className="boxMes">
-            Mayo
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/junio" className="boxMes">
-            Junio
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/julio" className="boxMes">
-            Julio
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/agosto" className="boxMes">
-            Agosto
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/septiembre" className="boxMes">
-            Septiembre
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/octubre" className="boxMes">
-            Octubre
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/noviembre" className="boxMes">
-            Noviembre
-          </Link>
-        </div>
-        <div className="mes">
-          <Link to="/diciembre" className="boxMes">
-            Diciembre
-          </Link>
-        </div>
+      <h2 className="titulo">
+        Meses del año <span>{mesSeleccionado}</span>
+      </h2>
+      <div className="contenedor">
+        <section className="meses12">
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Enero')}>
+              Enero
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Febrero')}>
+              Febrero
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Marzo')}>
+              Marzo
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Abril')}>
+              Abril
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Mayo')}>
+              Mayo
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Junio')}>
+              Junio
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Julio')}>
+              Julio
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Agosto')}>
+              Agosto
+            </div>
+          </div>
+          <div className="mes">
+            <div
+              className="boxMes"
+              onClick={() => manejarClicMes('Septiembre')}
+            >
+              Septiembre
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Octubre')}>
+              Octubre
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Noviembre')}>
+              Noviembre
+            </div>
+          </div>
+          <div className="mes">
+            <div className="boxMes" onClick={() => manejarClicMes('Diciembre')}>
+              Diciembre
+            </div>
+          </div>
+        </section>
+      </div>
+      <section>
+        <DiasTabla mesx={Meses} />
       </section>
     </>
   );

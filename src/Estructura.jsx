@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Estadisticas from "./Paginas/Estadisticas";
+import Inicio from "./Paginas/Inicio";
 import Apuntes from "./Paginas/Apuntes";
 
 const Estructura = () => {
@@ -8,11 +8,11 @@ const Estructura = () => {
       <div>
         <Routes>
           {/* NavBar */}
-          <Route path="/Estadisticas" element={<Estadisticas />} />
+          <Route path="/Inicio" element={<Inicio />} />
           <Route path="/Apuntes" element={<Apuntes />} />
 
           {/* Inicio */}
-          <Route path="/" element={<Estadisticas /> } />
+          <Route path="/" element={<Inicio /> } />
 
           {/* Errores */}
           {/* <Route path="/*" element={<Error404 />} /> */}

@@ -9,10 +9,10 @@ const Nav = () => {
           <h1>Bitácora</h1>
           <ul className="menu">
             <li>
-              <Link to="/Inicio">Inicio</Link>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <Link to="/apuntes">Apuntes</Link>
+              <Link to="/Formulario">Detalle del Día</Link>
             </li>
           </ul>
         </div>

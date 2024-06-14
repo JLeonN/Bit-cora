@@ -1,5 +1,5 @@
-import Formulario from '../Componentes/Agregar/Formulario';
-import Meses from '../Componentes/Meses/Meses';
+import Meses from "../Componentes/MesesYDias/Meses";
+
 
 const Inicio = () => {
   return (
@@ -7,9 +7,6 @@ const Inicio = () => {
       <section >
         <Meses />
       </section>
-      <div>
-        <Formulario />
-      </div>
     </>
   );
 };

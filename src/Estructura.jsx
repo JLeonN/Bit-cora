@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Paginas/Inicio";
-import Apuntes from "./Paginas/Apuntes";
+import Formulario from "./Componentes/Modals/Formulario";
 
 const Estructura = () => {
   return (
@@ -8,8 +8,8 @@ const Estructura = () => {
       <div>
         <Routes>
           {/* NavBar */}
-          <Route path="/Inicio" element={<Inicio />} />
-          <Route path="/Apuntes" element={<Apuntes />} />
+          <Route path="/" element={<Inicio />} />
+          <Route path="/Formulario" element={<Formulario />} />
 
           {/* Inicio */}
           <Route path="/" element={<Inicio /> } />

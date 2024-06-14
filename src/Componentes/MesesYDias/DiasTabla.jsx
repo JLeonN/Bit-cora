@@ -1,8 +1,8 @@
-const DiasTabla = ({ diaDeHoy, mes, diaDeTrabajo, pedidos, items, negados }) => {
+const DiasTabla = ({ mes, diaDeTrabajo, pedidos, items, negados }) => {
   return (
     <>
       <h2 className="titulo">
-        Días del mes <span>{diaDeHoy}</span>
+        Días del mes <span>{mes}</span>
       </h2>
       <dir className="contenedor">
         <table className="TablaDias">

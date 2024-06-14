@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DiasTabla from './Días/DiasTabla';
+import DiasTabla from './DiasTabla';
 
 const Meses = () => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');

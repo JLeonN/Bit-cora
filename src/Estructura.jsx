@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Paginas/Inicio";
-import Formulario from "./Componentes/Modals/Formulario";
+import Formulario from "./Componentes/MesesYDias/Formulario";
 
 const Estructura = () => {
   return (

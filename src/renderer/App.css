@@ -77,6 +77,35 @@ a:hover {
   color: var(--Hover);
 }
 /* ////////////////////////// */
+
+/* Botones */
+button {
+  padding: 10px 15px;
+  background-color: var(--Secciones2);
+  color: var(--Texto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--Texto);
+  color: var(--Hover);
+}
+/* Responsividad 600px */
+@media (max-width: 600px) {
+  .detalleForm {
+    padding: 15px;
+  }
+  .grupoFormulario input,
+  .grupoFormulario textarea {
+    padding: 8px;
+  }
+  button {
+    padding: 8px 12px;
+  }
+}
+/* ////////////////////////// */
 /* --------------------------------------------------------------------------------------------------------------- */
 
 /* ---NavBar--- */
@@ -300,29 +329,33 @@ input:focus {
 textarea:focus {
   border: 1px solid var(--Hover);
 }
-button {
-  padding: 10px 15px;
-  background-color: var(--Secciones2);
+/* boton */
+.botones {
+  display: flex;
+  justify-content: space-between;
+}
+/* Usuarios */
+.grupoFormulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.grupoFormulario label {
+  margin-bottom: 5px;
+  font-size: 1rem;
   color: var(--Texto);
-  border: none;
+}
+.grupoFormulario select {
+  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: 1px solid var(--Secciones2);
+  background-color: var(--Secciones1);
+  color: var(--Texto);
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
 }
-button:hover {
-  background-color: var(--Texto);
-  color: var(--Hover);
+.grupoFormulario select:focus {
+  border: 1px solid var(--Hover);
 }
-/* Responsividad 600px */
-@media (max-width: 600px) {
-  .detalleForm {
-    padding: 15px;
-  }
-  .grupoFormulario input,
-  .grupoFormulario textarea {
-    padding: 8px;
-  }
-  button {
-    padding: 8px 12px;
-  }
-}
+/* --------------------------------------------------------------------------------------------------------------- */

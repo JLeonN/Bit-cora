@@ -359,3 +359,57 @@ textarea:focus {
   border: 1px solid var(--Hover);
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+
+/* Agendar Usuarios */
+
+.contenedorUsuarios {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: var(--Secciones1);
+  padding: 20px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+.inputUsuarios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--Texto);
+  border-radius: 5px;
+}
+.listaUsuarios {
+  list-style-type: none;
+  padding: 0;
+}
+.usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--FondoBody);
+  color: var(--Texto);
+  border-radius: 5px;
+}
+.borrarUsuario {
+  background-color: var(--Hover);
+  color: var(--Texto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.borrarUsuario:hover {
+  background-color: var(--Texto);
+}
+/* --------------------------------------------------------------------------------------------------------------- */

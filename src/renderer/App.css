@@ -15,6 +15,7 @@
   /* Colores */
   --TituloH1: #4682b4;
   --FondoBody: #2a2d34;
+  --FondoModal: #000000bf;
   --Texto: #d3d3d3;
   --TextoLink: #5f9ea0;
   --Secciones1: #696969;
@@ -58,6 +59,26 @@ body {
     font-size: 1rem;
   }
 }
+
+/* tituloH3 */
+.tituloH3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--Texto);
+  margin-top: 15px;
+}
+/* Responsividad 768px */
+@media (max-width: 768px) {
+  .tituloH3 {
+    font-size: 1.2rem;
+  }
+}
+/* Responsividad 480px */
+@media (max-width: 480px) {
+  .tituloH3 {
+    font-size: 1rem;
+  }
+}
 /* ////////////////////////// */
 
 /* Eliminar el estilo de lista predeterminado y otros estilos */
@@ -78,7 +99,7 @@ a:hover {
 }
 /* ////////////////////////// */
 
-/* Botones */
+/* Boton */
 button {
   padding: 10px 15px;
   background-color: var(--Secciones2);
@@ -104,6 +125,11 @@ button:hover {
   button {
     padding: 8px 12px;
   }
+}
+/* Botons */
+.botones {
+  display: flex;
+  justify-content: space-evenly;
 }
 /* ////////////////////////// */
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -246,7 +272,7 @@ h1 {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
-/* Días */
+/* ---Días--- */
 
 table.TablaDias {
   width: 100%;
@@ -291,7 +317,7 @@ table.TablaDias tbody tr:hover {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
-/* Formulario */
+/* ---Formulario--- */
 
 .detalleForm {
   width: 100%;
@@ -329,11 +355,6 @@ input:focus {
 textarea:focus {
   border: 1px solid var(--Hover);
 }
-/* boton */
-.botones {
-  display: flex;
-  justify-content: space-between;
-}
 /* Usuarios */
 .grupoFormulario {
   display: flex;
@@ -360,7 +381,7 @@ textarea:focus {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
-/* Agendar Usuarios */
+/* ---Agendar Usuarios--- */
 
 .contenedorUsuarios {
   width: 100%;
@@ -411,5 +432,26 @@ input[type='text'] {
 }
 .borrarUsuario:hover {
   background-color: var(--Texto);
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---Modal--- */
+
+.tituloModal {
+  margin-top: -15px;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding-top: 15rem;
+  background-color: var(--FondoModal);
+  display: none;
+}
+.modal.is-open {
+  display: block;
 }
 /* --------------------------------------------------------------------------------------------------------------- */

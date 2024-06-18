@@ -1,20 +1,11 @@
-import Formulario from "../Componentes/MesesYDias/Formulario";
-import Meses from "../Componentes/MesesYDias/Meses";
-import Modals from "../Componentes/Modals/Modals";
-
+import Meses from '../Componentes/MesesYDias/Meses';
 
 const Inicio = () => {
   return (
     <>
-      <section >
+      <section>
         <Meses />
       </section>
-      <div>
-        <Modals />
-      </div>
-      <dir>
-        <Formulario></Formulario>
-      </dir>
     </>
   );
 };

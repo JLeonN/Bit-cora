@@ -8,14 +8,13 @@ const Estructura = () => {
       <div>
         <Routes>
           {/* NavBar */}
-          <Route path="/" element={<Inicio />} />
+          {/* <Route path="/" element={<Inicio />} /> */}
           <Route path="/Configuracion" element={<Configuracion />} />
 
           {/* Inicio */}
           <Route path="/" element={<Inicio /> } />
 
           {/* Errores */}
-          {/* <Route path="/*" element={<Error404 />} /> */}
         </Routes>
       </div>
     </>

@@ -1,8 +1,10 @@
-const Formulario = ({ children }) => {
+const Formulario = ({ closeModal }) => {
+  const noCerrarEnElDiv = (e) => e.stopPropagation();
+
   return (
     <>
-      <h2 className="titulo">Detalle del Día</h2>
-      <form className="detalleForm">
+      <form onClick={noCerrarEnElDiv} className="detalleForm">
+        <h2 className="titulo tituloModal">Detalle del Día</h2>
         <div className="grupoFormulario">
           <label htmlFor="usuario">Usuarios</label>
           <select id="usuario" name="usuario">
@@ -28,14 +30,11 @@ const Formulario = ({ children }) => {
           <textarea id="notas" name="notas"></textarea>
         </div>
         <div className="botones">
-          <button className="botonGuardar" type="submit">
-            Guardar
-          </button>
-          <button className="botonConcelar" type="button">
+          <button type="submit">Guardar</button>
+          <button onClick={closeModal} type="button">
             Cancelar
           </button>
         </div>
-        {children}
       </form>
     </>
   );

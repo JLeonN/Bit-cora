@@ -7,10 +7,13 @@ const Modals = () => {
 
   return (
     <div>
-      <h3 className="titulo">Formularios</h3>
-      <button onClick={openModal1}>Botón que llama al modal</button>
+      <div className="contenedor">
+        <button className="botones botonDetalle" onClick={openModal1}>
+          Detalle del Día
+        </button>
+      </div>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-          <Formulario closeModal={closeModal1} />
+        <Formulario closeModal={closeModal1} />
       </Modal>
     </div>
   );

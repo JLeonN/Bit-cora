@@ -454,4 +454,8 @@ input[type='text'] {
 .modal.is-open {
   display: block;
 }
+/* Boton de modal = Detalle del Día */
+.botonDetalle {
+  margin-top: 20px;
+}
 /* --------------------------------------------------------------------------------------------------------------- */

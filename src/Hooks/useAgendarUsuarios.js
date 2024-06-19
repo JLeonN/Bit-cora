@@ -17,7 +17,7 @@ const useAgendarUsuarios = () => {
   };
 
   const borrarUsuario = (index) => {
-    setUsuarios(usuarios.filter((_, i) => i !== index));
+    setUsuarios(usuarios.filter((u, i) => i !== index));
   };
 
   return {
@@ -25,7 +25,7 @@ const useAgendarUsuarios = () => {
     manejarCambioInput,
     agregarUsuario,
     usuarios,
-    borrarUsuario
+    borrarUsuario,
   };
 };
 

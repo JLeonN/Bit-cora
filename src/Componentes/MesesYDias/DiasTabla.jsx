@@ -8,7 +8,9 @@ const DiasTabla = ({ mes, diaDeTrabajo, pedidos, items, negados }) => {
         <table className="TablaDias">
           <thead>
             <tr>
-              <th>Días de <span>{mes}</span></th>
+              <th>
+                Días de <span>{mes}</span>
+              </th>
               <th>Cantidad de pedidos</th>
               <th>Cantidad de ítems</th>
               <th>Ítems negados</th>
@@ -16,7 +18,9 @@ const DiasTabla = ({ mes, diaDeTrabajo, pedidos, items, negados }) => {
           </thead>
           <tbody>
             <tr>
-              <td><span className="fecha">{diaDeTrabajo}</span></td>
+              <td>
+                <span className="fecha">{diaDeTrabajo}</span>
+              </td>
               <td>{pedidos}</td>
               <td>{items}</td>
               <td>{negados}</td>

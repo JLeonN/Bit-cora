@@ -2,7 +2,7 @@ import { useModal } from '../../Hooks/useModal';
 import Formulario from '../Formulario';
 import Modal from './Modal';
 
-const Modals = () => {
+const Modals = ({ usuarios }) => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
 
   return (
@@ -13,7 +13,7 @@ const Modals = () => {
         </button>
       </div>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-        <Formulario closeModal={closeModal1} />
+        <Formulario closeModal={closeModal1} usuarios={usuarios} />
       </Modal>
     </div>
   );

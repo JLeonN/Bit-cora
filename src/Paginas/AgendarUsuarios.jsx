@@ -1,7 +1,11 @@
-import useAgendarUsuarios from '../Hooks/useAgendarUsuarios';
-
-const AgendarUsuarios = () => {
-  const { valorInput, manejarCambioInput, agregarUsuario, usuarios, borrarUsuario } = useAgendarUsuarios();
+const AgendarUsuarios = ({
+  valorInput,
+  manejarCambioInput,
+  agregarUsuario,
+  usuarios,
+  borrarUsuario,
+}) => {
+  console.log('2', usuarios);
 
   return (
     <>
@@ -23,7 +27,12 @@ const AgendarUsuarios = () => {
           {usuarios.map((usuario, index) => (
             <li key={index} className="usuario">
               {usuario}
-              <button onClick={() => borrarUsuario(index)} className="borrarUsuario">Borrar</button>
+              <button
+                onClick={() => borrarUsuario(index)}
+                className="borrarUsuario"
+              >
+                Borrar
+              </button>
             </li>
           ))}
         </ul>

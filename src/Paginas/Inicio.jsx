@@ -1,10 +1,10 @@
 import Meses from '../Componentes/MesesYDias/Meses';
 
-const Inicio = () => {
+const Inicio = ({ usuarios }) => {
   return (
     <>
       <section>
-        <Meses />
+        <Meses usuarios={usuarios} />
       </section>
     </>
   );

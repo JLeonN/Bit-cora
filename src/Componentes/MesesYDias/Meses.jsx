@@ -2,7 +2,7 @@ import { useState } from 'react';
 import DiasTabla from './DiasTabla';
 import TodoModal from '../Modals/TodoModal';
 
-const Meses = () => {
+const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
 
   const manejarClicMes = (mes) => {
@@ -82,7 +82,7 @@ const Meses = () => {
         </section>
       </div>
       <section>
-        <TodoModal />
+        <TodoModal usuarios={usuarios} />
         <DiasTabla mes={mesSeleccionado} />
       </section>
     </>

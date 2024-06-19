@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import SelectorDeUsuarios from '../SelectorDeUsuarios';
 
-const Nav = () => {
+const Nav = ({ usuarios }) => {
   return (
     <>
       <nav className="navbar backgroundImage">
@@ -16,7 +16,7 @@ const Nav = () => {
               <Link to="/AgendarUsuarios">Agendar Usuarios</Link>
             </li>
             <li>
-              <SelectorDeUsuarios />
+              <SelectorDeUsuarios usuarios={usuarios} />
             </li>
           </ul>
         </div>

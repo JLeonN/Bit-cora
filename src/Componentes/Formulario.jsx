@@ -1,4 +1,4 @@
-const Formulario = ({ closeModal }) => {
+const Formulario = ({ closeModal, usuarios }) => {
   const noCerrarEnElDiv = (e) => e.stopPropagation();
 
   return (
@@ -8,9 +8,9 @@ const Formulario = ({ closeModal }) => {
         <div className="grupoFormulario">
           <label htmlFor="usuario">Usuarios</label>
           <select id="usuario" name="usuario">
-            <option value="usuario1">Usuario 1</option>
-            <option value="usuario2">Usuario 2</option>
-            <option value="usuario3">Usuario 3</option>
+            {usuarios.map((usuarios, index) => (
+              <option key={index}>{usuarios}</option>
+            ))}
           </select>
         </div>
         <div className="grupoFormulario">

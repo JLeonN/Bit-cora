@@ -1,10 +1,10 @@
-import Modals from "./Modales";
+import Modals from './Modales';
 
-const TodoModal = () => {
+const TodoModal = ({ usuarios }) => {
   return (
     <>
       <div className="contenedor">
-        <Modals />
+        <Modals usuarios={usuarios} />
       </div>
     </>
   );

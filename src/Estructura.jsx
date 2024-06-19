@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Paginas/Inicio";
-import Configuracion from "./Paginas/Configuracion";
+import AgendarUsuarios from "./Paginas/AgendarUsuarios";
 
 const Estructura = () => {
   return (
@@ -9,7 +9,7 @@ const Estructura = () => {
         <Routes>
           {/* NavBar */}
           {/* <Route path="/" element={<Inicio />} /> */}
-          <Route path="/Configuracion" element={<Configuracion />} />
+          <Route path="/AgendarUsuarios" element={<AgendarUsuarios />} />
 
           {/* Inicio */}
           <Route path="/" element={<Inicio /> } />

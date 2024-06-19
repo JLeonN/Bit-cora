@@ -459,3 +459,43 @@ input[type='text'] {
   margin-top: 20px;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---Selector de usuarios--- */
+
+.selectorIzq {
+  display: flex;
+  justify-content: flex-start;
+}
+.grupoFormulario {
+  margin-bottom: 5px;
+  margin-top: 7px;
+  color: var(--Texto);
+  font-weight: bold;
+}
+.grupoFormulario select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--TextoLink);
+  color: var(--Texto);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align-last: center;
+  transition: all 0.3s ease;
+}
+.grupoFormulario select:hover {
+  background-color: var(--TituloH1);
+}
+/* Responsividad */
+@media (max-width: 600px) {
+  .selectorIzq {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grupoFormulario select {
+    width: 100%;
+    font-size: 1rem;
+    text-align-last: left; 
+  }
+}
+/* --------------------------------------------------------------------------------------------------------------- */

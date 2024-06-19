@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SelectorDeUsuarios from '../SelectorDeUsuarios';
 
 const Nav = () => {
   return (
@@ -13,6 +14,9 @@ const Nav = () => {
             </li>
             <li>
               <Link to="/AgendarUsuarios">Agendar Usuarios</Link>
+            </li>
+            <li>
+              <SelectorDeUsuarios />
             </li>
           </ul>
         </div>

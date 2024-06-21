@@ -1,33 +1,31 @@
-const DiasTabla = ({ mes, diaDeTrabajo, pedidos, items, negados }) => {
+const DiasTabla = ({ mes, dias }) => {
   return (
     <>
-      <h2 className="titulo">
-        Días del mes <span>{mes}</span>
-      </h2>
-      <dir className="contenedor">
+      <h2 className="titulo">{mes}</h2>
+      <div className="contenedor">
         <table className="TablaDias">
           <thead>
             <tr>
-              <th>
-                Días de <span>{mes}</span>
-              </th>
-              <th>Cantidad de pedidos</th>
+              <th>Día</th>
+              <th>Número de boleta</th>
               <th>Cantidad de ítems</th>
               <th>Ítems negados</th>
+              <th>Nota</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <span className="fecha">{diaDeTrabajo}</span>
-              </td>
-              <td>{pedidos}</td>
-              <td>{items}</td>
-              <td>{negados}</td>
-            </tr>
+            {dias.map((dia, index) => (
+              <tr key={index}>
+                <td>{dia.dia}</td>
+                <td>{dia.numeroBoleta}</td>
+                <td>{dia.cantidadItems}</td>
+                <td>{dia.cantidadItemsNegados}</td>
+                <td>{dia.notas}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
-      </dir>
+      </div>
     </>
   );
 };

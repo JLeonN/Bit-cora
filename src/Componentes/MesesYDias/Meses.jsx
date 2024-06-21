@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DiasTabla from './DiasTabla';
 import TodoModal from '../Modals/TodoModal';
+import useFor from '../../Hooks/useFor';
 
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
@@ -9,11 +10,19 @@ const Meses = ({ usuarios }) => {
     setMesSeleccionado(mes);
   };
 
+  const {
+    numeroBoleta,
+    cantidadItems,
+    cantidadItemsNegados,
+    notas,
+    manejarCambioInput,
+    guardarInfo,
+    dias,
+  } = useFor();
+
   return (
     <>
-      <h2 className="titulo">
-        Meses del año <span>{mesSeleccionado}</span>
-      </h2>
+      {/* <h2 className="titulo">{mesSeleccionado}</h2> */}
       <div className="contenedor">
         <section className="meses12">
           <div className="mes">
@@ -82,8 +91,16 @@ const Meses = ({ usuarios }) => {
         </section>
       </div>
       <section>
-        <TodoModal usuarios={usuarios} />
-        <DiasTabla mes={mesSeleccionado} />
+        <TodoModal
+          usuarios={usuarios}
+          numeroBoleta={numeroBoleta}
+          cantidadItems={cantidadItems}
+          cantidadItemsNegados={cantidadItemsNegados}
+          notas={notas}
+          manejarCambioInput={manejarCambioInput}
+          guardarInfo={guardarInfo}
+        />
+        <DiasTabla mes={mesSeleccionado} dias={dias} />
       </section>
     </>
   );

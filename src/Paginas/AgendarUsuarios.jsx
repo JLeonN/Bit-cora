@@ -5,8 +5,6 @@ const AgendarUsuarios = ({
   usuarios,
   borrarUsuario,
 }) => {
-  console.log('2', usuarios);
-
   return (
     <>
       <h2 className="titulo">Agendar Usuarios</h2>

@@ -1,3 +1,5 @@
+import { FaRegCommentDots } from 'react-icons/fa';
+
 const DiasTabla = ({ mes, dias }) => {
   return (
     <>
@@ -20,7 +22,12 @@ const DiasTabla = ({ mes, dias }) => {
                 <td>{dia.numeroBoleta}</td>
                 <td>{dia.cantidadItems}</td>
                 <td>{dia.cantidadItemsNegados}</td>
-                <td>{dia.notas}</td>
+                <td>
+                  <div className="tooltip-container">
+                    <FaRegCommentDots className="note-icon" />
+                    <span className="tooltip-text">{dia.notas}</span>
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>

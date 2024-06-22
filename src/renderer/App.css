@@ -272,7 +272,7 @@ h1 {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
-/* ---Días--- */
+/* ---Días tabla--- */
 
 table.TablaDias {
   width: 100%;
@@ -314,6 +314,51 @@ table.TablaDias tbody tr:hover {
 }
 .fecha {
   font-size: 0.7rem;
+}
+
+/* Estilo para el icono de la nota */
+.note-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+/* Contenedor del tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+/* Texto del tooltip */
+.tooltip-text {
+  visibility: hidden;
+  width: 230px; /* Ancho del tooltip */
+  background-color: var(--FondoBody);
+  color: var(--Texto);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -200px; /* La mitad del ancho del tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+/* Flecha del tooltip */
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* En la parte inferior del tooltip */
+  left: 82%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+/* Mostrar el tooltip al pasar el mouse sobre el contenedor */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 

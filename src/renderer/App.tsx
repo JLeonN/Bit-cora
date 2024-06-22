@@ -1,8 +1,9 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
+import useAgendarUsuarios from '../Hooks/useAgendarUsuarios';
 import Nav from '../Componentes/NavBar/Nav';
 import Estructura from '../Estructura';
-import useAgendarUsuarios from '../Hooks/useAgendarUsuarios';
+import Footer from '../Componentes/Footer/Footer';
 
 export default function App() {
   const {
@@ -23,6 +24,7 @@ export default function App() {
           usuarios={usuarios}
           borrarUsuario={borrarUsuario}
         />
+        <Footer />
       </BrowserRouter>
     </>
   );

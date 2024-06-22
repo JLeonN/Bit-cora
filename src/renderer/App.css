@@ -499,3 +499,63 @@ input[type='text'] {
   }
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---footer--- */
+
+.footer {
+  background-color: var(--Secciones1);
+  color: var(--Texto);
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer p {
+  margin: 0;
+  margin-left: 10px;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icon {
+  color: var(--Texto);
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.social-icon:hover {
+  color: var(--Texto);
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.linkedin {
+  background-image: url('/src/Imagenes/LinkedIn_1.png');
+  border-radius: 10px;
+}
+.github {
+  background-image: url('/src/Imagenes/GitHub_0.png');
+  border-radius: 10px;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+/* --------------------------------------------------------------------------------------------------------------- */

@@ -9,8 +9,8 @@ const DiasTabla = ({ mes, dias }) => {
           <thead>
             <tr>
               <th>Día</th>
-              <th>Número de boleta</th>
-              <th>Cantidad de ítems</th>
+              <th>Boleta</th>
+              <th>Ítems</th>
               <th>Ítems negados</th>
               <th>Nota</th>
             </tr>

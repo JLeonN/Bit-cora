@@ -23,10 +23,12 @@ const DiasTabla = ({ mes, dias }) => {
                 <td>{dia.cantidadItems}</td>
                 <td>{dia.cantidadItemsNegados}</td>
                 <td>
-                  <div className="tooltip-container">
-                    <FaRegCommentDots className="note-icon" />
-                    <span className="tooltip-text">{dia.notas}</span>
-                  </div>
+                  {dia.notas && (
+                    <div className="tooltip-container">
+                      <FaRegCommentDots className="note-icon" />
+                      <span className="tooltip-text">{dia.notas}</span>
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

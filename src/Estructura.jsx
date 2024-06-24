@@ -14,7 +14,6 @@ const Estructura = ({
       <div>
         <Routes>
           {/* NavBar */}
-          {/* <Route path="/" element={<Inicio />} /> */}
           <Route
             path="/AgendarUsuarios"
             element={
@@ -27,11 +26,8 @@ const Estructura = ({
               />
             }
           />
-
           {/* Inicio */}
           <Route path="/" element={<Inicio usuarios={usuarios} />} />
-
-          {/* Errores */}
         </Routes>
       </div>
     </>

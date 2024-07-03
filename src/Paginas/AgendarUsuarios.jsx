@@ -22,11 +22,11 @@ const AgendarUsuarios = ({
           </button>
         </div>
         <ul className="listaUsuarios">
-          {usuarios.map((usuario, index) => (
-            <li key={index} className="usuario">
-              {usuario}
+          {usuarios.map((usuario) => (
+            <li key={usuario.id} className="usuario">
+              {usuario.nombre}
               <button
-                onClick={() => borrarUsuario(index)}
+                onClick={() => borrarUsuario(usuario.id)}
                 className="borrarUsuario"
               >
                 Borrar

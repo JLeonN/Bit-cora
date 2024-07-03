@@ -6,8 +6,8 @@ const SelectorDeUsuarios = ({ usuarios }) => {
           <option disabled selected hidden>
             Usuarios
           </option>
-          {usuarios.map((usuarios, index) => (
-            <option key={index}>{usuarios}</option>
+          {usuarios.map((usuario) => (
+            <option key={usuario.id}>{usuario.nombre}</option>
           ))}
         </select>
       </div>

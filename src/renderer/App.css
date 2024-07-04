@@ -29,6 +29,7 @@
 /* ////////////////////////// */
 body {
   background-color: var(--FondoBody);
+  margin-top: 250px;
 }
 /* ////////////////////////// */
 
@@ -136,6 +137,20 @@ button:hover {
 
 /* ---NavBar--- */
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+.contNav {
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .logo {
   background-image: url(/src/Imagenes/LogoBrújula.png);
   width: 2.5rem;
@@ -551,9 +566,10 @@ input[type='text'] {
   background-color: var(--Secciones1);
   color: var(--Texto);
   padding: 20px 0;
+  margin-top: 250px;
   text-align: center;
-  position: fixed;
   width: 100%;
+  position: relative;
   bottom: 0;
 }
 .footer-content {

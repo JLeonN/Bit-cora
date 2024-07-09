@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 const useFor = () => {
   const [numeroBoleta, setNumeroBoleta] = useState('');
-  const [cantidadItems, setCantidadItems] = useState();
-  const [cantidadItemsNegados, setCantidadItemsNegados] = useState();
+  const [cantidadItems, setCantidadItems] = useState('');
+  const [cantidadItemsNegados, setCantidadItemsNegados] = useState('');
   const [notas, setNotas] = useState('');
   const [dias, setDias] = useState([]);
 
@@ -12,7 +12,7 @@ const useFor = () => {
     const { name, value } = e.target;
     switch (name) {
       case 'numeroBoleta':
-        setNumeroBoleta(value);
+        setNumeroBoleta(Number(value));
         break;
       case 'cantidadItems':
         setCantidadItems(Number(value));

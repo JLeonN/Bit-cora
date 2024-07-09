@@ -27,15 +27,15 @@ const Formulario = ({
         <div className="grupoFormulario">
           <label htmlFor="usuario">Usuarios</label>
           <select id="usuario" name="usuario">
-            {usuarios.map((usuario, index) => (
-              <option key={index}>{usuario}</option>
+            {usuarios.map((usuario, id) => (
+              <option key={id}>{usuario.nombre}</option>
             ))}
           </select>
         </div>
         <div className="grupoFormulario">
           <label htmlFor="numeroBoleta">Número boleta</label>
           <input
-            type="text"
+            type="number"
             id="numeroBoleta"
             name="numeroBoleta"
             value={numeroBoleta}

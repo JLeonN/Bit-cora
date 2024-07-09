@@ -2,16 +2,15 @@
 import { useEffect, useState } from 'react';
 import Repositorio from '../Componentes/Base de datos/repositorio';
 
-const usuariosRepositorio = new Repositorio("Usuarios");
-
-
+const usuariosRepositorio = new Repositorio('Usuarios');
 
 const useAgendarUsuarios = () => {
   const [valorInput, setValorInput] = useState('');
   const [usuarios, setUsuarios] = useState([]);
-useEffect(() => {
-  mostrarLista();
-}, []);
+
+  useEffect(() => {
+    mostrarLista();
+  }, []);
 
   const manejarCambioInput = (evento) => {
     setValorInput(evento.target.value);
@@ -23,8 +22,9 @@ useEffect(() => {
       setValorInput('');
       const usuario = {
         nombre: valorInput,
-      }
+      };
       usuariosRepositorio.guardar(usuario);
+      mostrarLista();
     }
   };
 
@@ -36,7 +36,7 @@ useEffect(() => {
   const mostrarLista = async () => {
     const lista = await usuariosRepositorio.obtenerTodo();
     setUsuarios(lista);
-  }
+  };
 
   return {
     valorInput,

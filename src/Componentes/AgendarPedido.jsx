@@ -1,4 +1,4 @@
-const Formulario = ({
+const AgendarPedido = ({
   closeModal,
   usuarios,
   numeroBoleta,
@@ -28,7 +28,7 @@ const Formulario = ({
           <label htmlFor="usuario">Usuarios</label>
           <select id="usuario" name="usuario">
             {usuarios.map((usuario, id) => (
-              <option key={id}>{usuario.nombre}</option>
+              <option key={usuario.id}>{usuario.nombre}</option>
             ))}
           </select>
         </div>
@@ -86,4 +86,4 @@ const Formulario = ({
   );
 };
 
-export default Formulario;
+export default AgendarPedido;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DiasTabla from './DiasTabla';
 import TodoModal from '../Modals/TodoModal';
-import useFor from '../../Hooks/useFor';
+import useAgendarPedido from '../../Hooks/useAgendarPedido';
 
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
@@ -18,7 +18,7 @@ const Meses = ({ usuarios }) => {
     manejarCambioInput,
     guardarInfo,
     dias,
-  } = useFor();
+  } = useAgendarPedido();
 
   return (
     <>

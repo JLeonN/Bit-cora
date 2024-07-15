@@ -1,7 +1,7 @@
-// Formulario
+// Agendar Pedido
 import { useState } from 'react';
 
-const useFor = () => {
+const useAgendarPedido = () => {
   const [numeroBoleta, setNumeroBoleta] = useState('');
   const [cantidadItems, setCantidadItems] = useState('');
   const [cantidadItemsNegados, setCantidadItemsNegados] = useState('');
@@ -28,7 +28,7 @@ const useFor = () => {
     }
   };
 
-  // ---Dia actual---
+  // ---Muestra el día en el programa---
   const today = new Date().toLocaleDateString('es-ES', {
     day: '2-digit',
     month: '2-digit',
@@ -45,7 +45,7 @@ const useFor = () => {
     };
     setDias([...dias, nuevoDia]);
 
-    // ---Resetear los valores del formulario---
+    // ---Resetear los valores del formulario para que no queden escritos---
     setNumeroBoleta('');
     setCantidadItems('');
     setCantidadItemsNegados('');
@@ -63,4 +63,4 @@ const useFor = () => {
   };
 };
 
-export default useFor;
+export default useAgendarPedido;

@@ -1,5 +1,5 @@
 import { useModal } from '../../Hooks/useModal';
-import Formulario from '../Formulario';
+import AgendarPedido from '../AgendarPedido';
 import Modal from './Modal';
 
 const Modals = ({
@@ -21,7 +21,7 @@ const Modals = ({
         </button>
       </div>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-        <Formulario
+        <AgendarPedido
           closeModal={closeModal1}
           usuarios={usuarios}
           numeroBoleta={numeroBoleta}

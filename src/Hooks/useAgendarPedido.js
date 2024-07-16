@@ -1,5 +1,8 @@
 // Agendar Pedido
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Repositorio from '../Componentes/Base de datos/repositorio';
+
+const pedidosRepositorio = new Repositorio('Pedidos');
 
 const useAgendarPedido = () => {
   const [numeroBoleta, setNumeroBoleta] = useState('');
@@ -7,6 +10,8 @@ const useAgendarPedido = () => {
   const [cantidadItemsNegados, setCantidadItemsNegados] = useState('');
   const [notas, setNotas] = useState('');
   const [dias, setDias] = useState([]);
+  const [mostrarDias, setMostrarDias] = useState([]);
+
 
   const manejarCambioInput = (e) => {
     const { name, value } = e.target;
@@ -35,6 +40,7 @@ const useAgendarPedido = () => {
     year: 'numeric',
   });
 
+  // ---Prepara la estructuración de datos para guardar---
   const guardarInfo = () => {
     const nuevoDia = {
       dia: today,
@@ -50,7 +56,21 @@ const useAgendarPedido = () => {
     setCantidadItems('');
     setCantidadItemsNegados('');
     setNotas('');
+
+    // ---Guarda la info---
+    pedidosRepositorio.guardar(nuevoDia);
   };
+
+  // ---Mostrar info---
+  const mostrarInfo = async () => {
+    const info = await pedidosRepositorio.obtenerTodo();
+    setDias(info);
+  };
+
+  // --Muestra lo guardado al iniciar---
+    useEffect(() => {
+      mostrarInfo();
+    }, []);
 
   return {
     numeroBoleta,

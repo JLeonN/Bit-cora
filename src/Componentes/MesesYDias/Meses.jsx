@@ -22,7 +22,7 @@ const Meses = ({ usuarios }) => {
 
   return (
     <>
-      <div className="lol">
+      <div className="horizontal">
         {/* Selector de usuarios o perfiles */}
         <div className="grupoFormulario perfil">
           <select id="usuario" name="usuario">

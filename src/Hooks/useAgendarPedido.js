@@ -9,9 +9,9 @@ const useAgendarPedido = () => {
   const [cantidadItems, setCantidadItems] = useState('');
   const [cantidadItemsNegados, setCantidadItemsNegados] = useState('');
   const [notas, setNotas] = useState('');
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
   const [dias, setDias] = useState([]);
-  const [mostrarDias, setMostrarDias] = useState([]);
-
+  const [usuarios, setUsuarios] = useState([]);
 
   const manejarCambioInput = (e) => {
     const { name, value } = e.target;
@@ -27,6 +27,9 @@ const useAgendarPedido = () => {
         break;
       case 'notas':
         setNotas(value);
+        break;
+      case 'usuarioSeleccionado':
+        setUsuarioSeleccionado(Number(value));
         break;
       default:
         break;
@@ -48,8 +51,10 @@ const useAgendarPedido = () => {
       cantidadItems,
       cantidadItemsNegados,
       notas,
+      usuarioId: usuarioSeleccionado,
     };
     setDias([...dias, nuevoDia]);
+    console.log("1",nuevoDia);
 
     // ---Resetear los valores del formulario para que no queden escritos---
     setNumeroBoleta('');
@@ -68,18 +73,20 @@ const useAgendarPedido = () => {
   };
 
   // --Muestra lo guardado al iniciar---
-    useEffect(() => {
-      mostrarInfo();
-    }, []);
+  useEffect(() => {
+    mostrarInfo();
+  }, []);
 
   return {
     numeroBoleta,
     cantidadItems,
     cantidadItemsNegados,
     notas,
+    usuarioSeleccionado,
     manejarCambioInput,
     guardarInfo,
     dias,
+    usuarios,
   };
 };
 

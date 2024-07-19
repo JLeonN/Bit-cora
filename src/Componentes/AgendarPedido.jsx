@@ -5,6 +5,7 @@ const AgendarPedido = ({
   cantidadItems,
   cantidadItemsNegados,
   notas,
+  usuarioSeleccionado,
   manejarCambioInput,
   guardarInfo,
 }) => {
@@ -26,9 +27,14 @@ const AgendarPedido = ({
         <h2 className="titulo tituloModal">Detalle del Día</h2>
         <div className="grupoFormulario">
           <label htmlFor="usuario">Usuarios</label>
-          <select id="usuario" name="usuario">
-            {usuarios.map((usuario, id) => (
-              <option key={usuario.id}>{usuario.nombre}</option>
+          <select
+            id="usuario"
+            name="usuarioSeleccionado"
+            value={usuarioSeleccionado}
+            onChange={manejarCambioInput}
+          >
+            {usuarios.map((usuario) => (
+              <option key={usuario.id} value={usuario.id}>{usuario.nombre}</option>
             ))}
           </select>
         </div>

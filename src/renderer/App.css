@@ -234,6 +234,10 @@ h1 {
 
 /* ---Meses del año--- */
 
+.lol {
+  background-color: var(--Secciones1);
+  padding: 20px;
+}
 .meses12 {
   display: flex;
   flex-wrap: wrap;
@@ -242,7 +246,7 @@ h1 {
   margin-top: 15px;
   width: 100%;
   max-width: 600px;
-  background-color: var(--Secciones1);
+  background-color: var(--FondoBody);
   padding: 20px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -492,6 +496,9 @@ input[type='text'] {
 }
 .borrarUsuario:hover {
   background-color: var(--Texto);
+}
+.perfil {
+  align-items: center;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 

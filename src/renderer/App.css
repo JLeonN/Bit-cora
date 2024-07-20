@@ -14,12 +14,14 @@
   --tipografiaGeneral: 'Jost', Arial, sans-serif;
   /* Colores */
   --TituloH1: #4682b4;
-  --FondoBody: #2a2d34;
+  --FondoBodyGradiente: linear-gradient(to bottom, #2a2d34, #1a1b1e);
   --FondoModal: #000000bf;
   --Texto: #d3d3d3;
   --TextoLink: #5f9ea0;
+  --Secciones1Gradiente: linear-gradient(to bottom, #696969, #5e5e5e, #545454, #4a4a4a, #404040);
   --Secciones1: #696969;
   --Secciones2: #708090;
+  --Secciones3: #2a2d34;
   --Hover: #b22222;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -28,8 +30,20 @@
 
 /* ////////////////////////// */
 body {
-  background-color: var(--FondoBody);
-  margin-top: 250px;
+  background: var(--FondoBodyGradiente);
+  margin-top: 170px;
+}
+/* Responsividad 768px */
+@media (max-width: 768px) {
+  body {
+    margin-top: 120px;
+  }
+}
+/* Responsividad 480px */
+@media (max-width: 480px) {
+  body {
+    margin-top: 90px;
+  }
 }
 /* ////////////////////////// */
 
@@ -246,7 +260,7 @@ h1 {
   margin-top: 15px;
   width: 100%;
   max-width: 600px;
-  background-color: var(--FondoBody);
+  background-color: var(--Secciones3);
   padding: 20px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -298,7 +312,8 @@ table.TablaDias {
   max-width: 800px;
   margin: 0 auto;
   border-collapse: collapse;
-  background-color: var(--Secciones1);
+  /* background-color: var(--Secciones1); */
+  background: var(--Secciones1Gradiente);
   color: var(--Texto);
   border-radius: 10px;
   overflow: hidden;
@@ -350,7 +365,7 @@ table.TablaDias tbody tr:hover {
 .tooltip-text {
   visibility: hidden;
   width: 230px; /* Ancho del tooltip */
-  background-color: var(--FondoBody);
+  background-color: var(--Secciones3);
   color: var(--Texto);
   text-align: center;
   border-radius: 6px;
@@ -482,7 +497,7 @@ input[type='text'] {
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: var(--FondoBody);
+  background-color: var(--Secciones3);
   color: var(--Texto);
   border-radius: 5px;
 }

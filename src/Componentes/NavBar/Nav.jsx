@@ -6,7 +6,6 @@ const Nav = ({ usuarios }) => {
     <>
       <nav className="navbar backgroundImage">
         <div className="contNav">
-          <div className="logo"></div>
           <div className="">
             <h1>Bitácora</h1>
             <ul className="menu">

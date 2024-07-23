@@ -1,17 +1,25 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
-const Footer = () => {
-  // ---Fecha y hora actual---
-  const today = new Date();
-  const formattedDate = today.toLocaleDateString('es-ES', {
+const PieDePagina = () => {
+  const [horaActual, setHoraActual] = useState(new Date());
+
+  useEffect(() => {
+    const idIntervalo = setInterval(() => {
+      setHoraActual(new Date());
+    }, 1000); // Actualiza cada segundo
+
+    return () => clearInterval(idIntervalo);
+  }, []);
+
+  const fechaFormateada = horaActual.toLocaleDateString('es-ES', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',
   });
-  const formattedTime = today.toLocaleTimeString('es-ES', {
+  const horaFormateada = horaActual.toLocaleTimeString('es-ES', {
     hour: '2-digit',
     minute: '2-digit',
-    // second: '2-digit',
+    second: '2-digit',
   });
 
   return (
@@ -19,10 +27,10 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer-content">
           <p>© 2024 JNúñez. Todos los derechos reservados.</p>
-          <p>
-            {formattedTime} - {formattedDate}
+          <p className="reloj">
+            {horaFormateada} - {fechaFormateada}
           </p>
-          <div className="social-icons">
+          <div className="social-icons contenedor">
             <a
               href="https://www.linkedin.com/in/j-l-n-t%C3%A9cnico/"
               target="_blank"
@@ -42,4 +50,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default PieDePagina;

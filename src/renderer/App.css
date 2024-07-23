@@ -18,7 +18,14 @@
   --FondoModal: #000000bf;
   --Texto: #d3d3d3;
   --TextoLink: #5f9ea0;
-  --Secciones1Gradiente: linear-gradient(to bottom, #696969, #5e5e5e, #545454, #4a4a4a, #404040);
+  --Secciones1Gradiente: linear-gradient(
+    to bottom,
+    #696969,
+    #5e5e5e,
+    #545454,
+    #4a4a4a,
+    #404040
+  );
   --Secciones1: #696969;
   --Secciones2: #708090;
   --Secciones3: #2a2d34;
@@ -152,7 +159,7 @@ button:hover {
 /* ---NavBar--- */
 
 .navbar {
-  position: fixed;
+  position: fixed; /* Posiciona un elemento en relación a la ventana del navegador */
   top: 0;
   left: 0;
   width: 100%;
@@ -160,22 +167,10 @@ button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 .contNav {
-  max-width: 1200px;
+  max-width: 888px;
   margin: 0 auto;
   align-items: center;
   flex-wrap: wrap;
-}
-.logo {
-  background-image: url(/src/Imagenes/LogoBrújula.png);
-  width: 2.5rem;
-  height: 2.5rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: -22px;
-}
-.logo:hover {
-  animation: rotate-scale-up 0.4s linear both;
 }
 @keyframes rotate-scale-up {
   0% {
@@ -588,17 +583,15 @@ input[type='text'] {
   background-color: var(--Secciones1);
   color: var(--Texto);
   padding: 20px 0;
-  margin-top: 250px;
+  margin-top: 125px;
   text-align: center;
   width: 100%;
   position: relative;
   bottom: 0;
 }
 .footer-content {
-  max-width: 1200px;
+  max-width: 888px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -606,9 +599,13 @@ input[type='text'] {
   margin: 0;
   margin-left: 10px;
 }
+.reloj {
+  padding-top: 10px;
+}
 .social-icons {
   display: flex;
   gap: 10px;
+  padding-top: 10px;
 }
 .social-icon {
   color: var(--Texto);

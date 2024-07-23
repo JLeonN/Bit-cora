@@ -38,7 +38,7 @@
 /* ////////////////////////// */
 body {
   background: var(--FondoBodyGradiente);
-  margin-top: 170px;
+  margin-top: 155px;
 }
 /* Responsividad 768px */
 @media (max-width: 768px) {

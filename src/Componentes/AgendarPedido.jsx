@@ -41,6 +41,7 @@ const AgendarPedido = ({
             ))}
           </select>
         </div>
+        {/* Número boleta */}
         <div className="grupoFormulario">
           <label htmlFor="numeroBoleta">Número boleta</label>
           <input
@@ -51,6 +52,7 @@ const AgendarPedido = ({
             onChange={manejarCambioInput}
           />
         </div>
+        {/* Cantidad de ítems */}
         <div className="grupoFormulario">
           <label htmlFor="cantidadItems">Cantidad de ítems</label>
           <input
@@ -61,6 +63,7 @@ const AgendarPedido = ({
             onChange={manejarCambioInput}
           />
         </div>
+        {/* Cantidad de ítems negados */}
         <div className="grupoFormulario">
           <label htmlFor="cantidadItemsNegados">
             Cantidad de ítems negados
@@ -73,6 +76,7 @@ const AgendarPedido = ({
             onChange={manejarCambioInput}
           />
         </div>
+        {/* Notas */}
         <div className="grupoFormulario">
           <label htmlFor="notas">Notas</label>
           <textarea
@@ -82,6 +86,7 @@ const AgendarPedido = ({
             onChange={manejarCambioInput}
           ></textarea>
         </div>
+        {/* Botones */}
         <div className="botones">
           <button type="submit" id="guardarInfo">
             Guardar

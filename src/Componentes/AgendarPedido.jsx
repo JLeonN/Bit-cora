@@ -25,6 +25,7 @@ const AgendarPedido = ({
         className="detalleForm"
       >
         <h2 className="titulo tituloModal">Detalle del Día</h2>
+        {/* Selector de usuarios o perfiles */}
         <div className="grupoFormulario">
           <label htmlFor="usuario">Usuarios</label>
           <select
@@ -34,7 +35,9 @@ const AgendarPedido = ({
             onChange={manejarCambioInput}
           >
             {usuarios.map((usuario) => (
-              <option key={usuario.id} value={usuario.id}>{usuario.nombre}</option>
+              <option key={usuario.id} value={usuario.id}>
+                {usuario.nombre}
+              </option>
             ))}
           </select>
         </div>

@@ -72,7 +72,7 @@ const useAgendarPedido = () => {
     setDias(info);
   };
 
-  // --Muestra lo guardado al iniciar---
+  // ---Muestra lo guardado al iniciar---
   useEffect(() => {
     mostrarInfo();
   }, []);

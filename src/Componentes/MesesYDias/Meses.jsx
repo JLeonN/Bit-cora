@@ -5,9 +5,14 @@ import useAgendarPedido from '../../Hooks/useAgendarPedido';
 
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
 
   const manejarClicMes = (mes) => {
     setMesSeleccionado(mes);
+  };
+
+  const manejarCambioUsuario = (e) => {
+    setUsuarioSeleccionado(e.target.value);
   };
 
   const {
@@ -20,14 +25,25 @@ const Meses = ({ usuarios }) => {
     dias,
   } = useAgendarPedido();
 
+  const diasFiltrados = dias.filter(
+    (dia) => dia.usuarioId === Number(usuarioSeleccionado),
+  );
+
   return (
     <>
       <div className="horizontal">
         {/* Selector de usuarios o perfiles */}
         <div className="grupoFormulario perfil">
-          <select id="usuario" name="usuario">
-            {usuarios.map((usuario, id) => (
-              <option key={usuario.id}>{usuario.nombre}</option>
+          <select
+            id="usuario"
+            name="usuario"
+            value={usuarioSeleccionado}
+            onChange={manejarCambioUsuario}
+          >
+            {usuarios.map((usuario) => (
+              <option key={usuario.id} value={usuario.id}>
+                {usuario.nombre}
+              </option>
             ))}
           </select>
         </div>
@@ -117,7 +133,7 @@ const Meses = ({ usuarios }) => {
           manejarCambioInput={manejarCambioInput}
           guardarInfo={guardarInfo}
         />
-        <DiasTabla mes={mesSeleccionado} dias={dias} />
+        <DiasTabla mes={mesSeleccionado} dias={diasFiltrados} />
       </section>
     </>
   );

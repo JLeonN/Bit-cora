@@ -457,11 +457,15 @@ textarea:focus {
 
 /* ---Agendar Usuarios--- */
 
+.tituloAU{
+  margin-top: 185px;
+}
 .contenedorUsuarios {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   background-color: var(--Secciones1);
   padding: 20px;
   padding-bottom: 30px;

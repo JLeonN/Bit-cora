@@ -7,7 +7,7 @@ const AgendarUsuarios = ({
 }) => {
   return (
     <>
-      <h2 className="titulo">Agendar Usuarios</h2>
+      <h2 className="titulo tituloAU">Agendar Usuarios</h2>
       <div className="contenedorUsuarios">
         <div className="inputUsuarios">
           <input

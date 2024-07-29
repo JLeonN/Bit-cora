@@ -27,7 +27,7 @@ const Estructura = ({
             }
           />
           {/* Inicio */}
-          <Route path="/" element={<Inicio usuarios={usuarios} />} />
+          {/* <Route path="/" element={<Inicio usuarios={usuarios} />} /> */}
         </Routes>
       </div>
     </>

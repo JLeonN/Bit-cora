@@ -2,6 +2,7 @@ import { useState } from 'react';
 import DiasTabla from './DiasTabla';
 import TodoModal from '../Modals/TodoModal';
 import useAgendarPedido from '../../Hooks/useAgendarPedido';
+import AñoSelector from './AñoSelector';
 
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
@@ -69,6 +70,10 @@ const Meses = ({ usuarios }) => {
           </select>
         </div>
 
+        {/* Selector de años */}
+        <div>
+          <AñoSelector />
+        </div>
         {/* Selector de mes */}
         <div className="contenedor">
           <section className="meses12">

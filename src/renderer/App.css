@@ -648,3 +648,24 @@ input[type='text'] {
   transform: scale(1.2);
 }
 /* --------------------------------------------------------------------------------------------------------------- */
+
+ /* Selector de años */
+
+.selectorAño {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+}
+.selectorAño select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--TextoLink);
+  color: var(--Texto);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align-last: center;
+  transition: all 0.3s ease;
+}
+.selectorAño select:hover {
+  background-color: var(--TituloH1);
+}

@@ -6,11 +6,28 @@ import useAgendarPedido from '../../Hooks/useAgendarPedido';
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
+  const [mesNumero, setMesNumero] = useState('');
 
-  
+  // Diccionario
+  const MESES = {
+    "Enero": 1,
+    "Febrero": 2,
+    "Marzo": 3,
+    "Abril": 4,
+    "Mayo": 5,
+    "Junio": 6,
+    "Julio": 7,
+    "Agosto": 8,
+    "Septiembre": 9,
+    "Octubre": 10,
+    "Noviembre": 11,
+    "Diciembre": 12
+  };
+
+  // Selector de meses
   const manejarClicMes = (mes) => {
     setMesSeleccionado(mes);
-    console.log("MES", mes);
+    console.log("MES", MESES [mes]);
   };
 
   const manejarCambioUsuario = (e) => {
@@ -30,7 +47,6 @@ const Meses = ({ usuarios }) => {
   const diasFiltrados = dias.filter(
     (dia) => dia.usuarioId === Number(usuarioSeleccionado),
   );
-
   return (
     <>
       <div className="horizontal">
@@ -57,62 +73,62 @@ const Meses = ({ usuarios }) => {
         <div className="contenedor">
           <section className="meses12">
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('01')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Enero')}>
                 Enero
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('02')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Febrero')}>
                 Febrero
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('03')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Marzo')}>
                 Marzo
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('04')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Abril')}>
                 Abril
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('05')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Mayo')}>
                 Mayo
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('06')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Junio')}>
                 Junio
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('07')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Julio')}>
                 Julio
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('08')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Agosto')}>
                 Agosto
               </div>
             </div>
             <div className="mes">
               <div
                 className="boxMes"
-                onClick={() => manejarClicMes('09')}
+                onClick={() => manejarClicMes('Septiembre')}
               >
                 Septiembre
               </div>
             </div>
             <div className="mes">
-              <div className="boxMes" onClick={() => manejarClicMes('10')}>
+              <div className="boxMes" onClick={() => manejarClicMes('Octubre')}>
                 Octubre
               </div>
             </div>
             <div className="mes">
               <div
                 className="boxMes"
-                onClick={() => manejarClicMes('11')}
+                onClick={() => manejarClicMes('Noviembre')}
               >
                 Noviembre
               </div>
@@ -120,7 +136,7 @@ const Meses = ({ usuarios }) => {
             <div className="mes">
               <div
                 className="boxMes"
-                onClick={() => manejarClicMes('12')}
+                onClick={() => manejarClicMes('Diciembre')}
               >
                 Diciembre
               </div>
@@ -141,7 +157,7 @@ const Meses = ({ usuarios }) => {
 
         {usuarioSeleccionado == '' && (
           <p className="seleccionePerfil" colSpan={5}>
-            Debe seleccione un perfiles
+            Debe seleccionar un perfiles
           </p>
         )}
         <DiasTabla mes={mesSeleccionado} dias={diasFiltrados} />

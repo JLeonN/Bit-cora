@@ -54,7 +54,6 @@ const useAgendarPedido = () => {
       usuarioId: usuarioSeleccionado,
     };
     setDias([...dias, nuevoDia]);
-    console.log("1",nuevoDia);
 
     // ---Resetear los valores del formulario para que no queden escritos---
     setNumeroBoleta('');

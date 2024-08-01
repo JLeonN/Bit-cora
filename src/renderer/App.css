@@ -298,6 +298,12 @@ h1 {
     flex: 1 0 50%; /* Ajuste para 2 columnas */
   }
 }
+.seleccionePerfil {
+  color: var(--TextoLink);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
 /* --------------------------------------------------------------------------------------------------------------- */
 
 /* ---Días tabla--- */
@@ -344,7 +350,6 @@ table.TablaDias tbody tr:hover {
 .fecha {
   font-size: 0.7rem;
 }
-
 /* Estilo para el icono de la nota */
 .note-icon {
   width: 24px;
@@ -457,7 +462,7 @@ textarea:focus {
 
 /* ---Agendar Usuarios--- */
 
-.tituloAU{
+.tituloAU {
   margin-top: 185px;
 }
 .contenedorUsuarios {

@@ -34,6 +34,9 @@ const AgendarPedido = ({
             value={usuarioSeleccionado}
             onChange={manejarCambioInput}
           >
+            <option value="" disabled>
+              Seleccione un perfiles
+            </option>
             {usuarios.map((usuario) => (
               <option key={usuario.id} value={usuario.id}>
                 {usuario.nombre}

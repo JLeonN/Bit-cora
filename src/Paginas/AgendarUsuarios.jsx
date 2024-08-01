@@ -7,7 +7,7 @@ const AgendarUsuarios = ({
 }) => {
   return (
     <>
-      <h2 className="titulo tituloAU">Agendar Usuarios</h2>
+      <h2 className="titulo tituloAU">Agendar perfiles</h2>
       <div className="contenedorUsuarios">
         <div className="inputUsuarios">
           <input
@@ -18,7 +18,7 @@ const AgendarUsuarios = ({
             onChange={manejarCambioInput}
           />
           <button onClick={agregarUsuario} id="agregarUsuarioButton">
-            Agregar Usuario
+            Agregar perfil
           </button>
         </div>
         <ul className="listaUsuarios">

@@ -19,6 +19,7 @@ const DiasTabla = ({ mes, dias }) => {
             {dias.map((dia, index) => (
               <tr key={index}>
                 <td>
+                  {/* Obtenemos la fecha como un string */}
                   {dia.dia.toLocaleDateString('es-ES', {
                     day: '2-digit',
                     month: '2-digit',

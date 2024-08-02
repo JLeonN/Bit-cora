@@ -8,7 +8,7 @@ const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
 
-  // Diccionario, mapa, objeto
+  // ---Diccionario, mapa, objeto---
   const MESES = {
     Enero: 0,
     Febrero: 1,
@@ -24,7 +24,7 @@ const Meses = ({ usuarios }) => {
     Diciembre: 11,
   };
 
-  // Selector de meses
+  // ---Selector de meses---
   const manejarClicMes = (mes) => {
     setMesSeleccionado(mes);
   };
@@ -43,27 +43,15 @@ const Meses = ({ usuarios }) => {
     pedidos,
   } = useAgendarPedido();
 
-
-
-// Trabajando con pablo
-
-  const pedidosFiltrados = pedidos.filter(
-    (pedido) => {
-      const numeroDelMesDelPedido = pedido.dia.getMonth();
-      const numeroDelMesSeleccionado = MESES[mesSeleccionado]
-      return (
-        pedido.usuarioId === Number(usuarioSeleccionado)
-        &&
-        numeroDelMesDelPedido === numeroDelMesSeleccionado
-      );
-    }
-  );
-  console.log('Pedidos', pedidosFiltrados);
-
-
-
-
-
+  
+  const pedidosFiltrados = pedidos.filter((pedido) => {
+    const numeroDelMesDelPedido = pedido.dia.getMonth();
+    const numeroDelMesSeleccionado = MESES[mesSeleccionado];
+    return (
+      pedido.usuarioId === Number(usuarioSeleccionado) &&
+      numeroDelMesDelPedido === numeroDelMesSeleccionado
+    );
+  });
 
   return (
     <>

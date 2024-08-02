@@ -10,7 +10,7 @@ const useAgendarPedido = () => {
   const [cantidadItemsNegados, setCantidadItemsNegados] = useState('');
   const [notas, setNotas] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
-  const [dias, setDias] = useState([]);
+  const [pedidos, setPedidos] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
 
   const manejarCambioInput = (e) => {
@@ -36,19 +36,10 @@ const useAgendarPedido = () => {
     }
   };
 
-  // ---Muestra el día en el programa---
-  // const today = new Date().toLocaleDateString('es-ES', {
-  //   day: '2-digit',
-  //   month: '2-digit',
-  //   year: 'numeric',
-  // });
-
-
-
   // ---Prepara la estructuración de datos para guardar---
   const guardarInfo = () => {
     const today = new Date();
-    const nuevoDia = {
+    const nuevoPedido = {
       dia: today,
       numeroBoleta,
       cantidadItems,
@@ -56,7 +47,7 @@ const useAgendarPedido = () => {
       notas,
       usuarioId: usuarioSeleccionado,
     };
-    setDias([...dias, nuevoDia]);
+    setPedidos([...pedidos, nuevoPedido]);
 
     // ---Resetear los valores del formulario para que no queden escritos---
     setNumeroBoleta('');
@@ -65,13 +56,13 @@ const useAgendarPedido = () => {
     setNotas('');
 
     // ---Guarda la info---
-    pedidosRepositorio.guardar(nuevoDia);
+    pedidosRepositorio.guardar(nuevoPedido);
   };
 
   // ---Mostrar info---
   const mostrarInfo = async () => {
     const info = await pedidosRepositorio.obtenerTodo();
-    setDias(info);
+    setPedidos(info);
   };
 
   // ---Muestra lo guardado al iniciar---
@@ -87,7 +78,7 @@ const useAgendarPedido = () => {
     usuarioSeleccionado,
     manejarCambioInput,
     guardarInfo,
-    pedidos: dias,
+    pedidos,
     usuarios,
   };
 };

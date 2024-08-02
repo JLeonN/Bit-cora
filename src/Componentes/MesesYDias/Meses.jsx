@@ -2,11 +2,15 @@ import { useState } from 'react';
 import DiasTabla from './DiasTabla';
 import TodoModal from '../Modals/TodoModal';
 import useAgendarPedido from '../../Hooks/useAgendarPedido';
-import AñoSelector from './AñoSelector';
+
+// ---Muestra el año actual---
+const añoActual = new Date().getFullYear();
 
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
+  // ---Siempre muestre el año actual---
+  const [añoSeleccionado, setAñoSeleccionado] = useState(añoActual);
 
   // ---Diccionario, mapa, objeto---
   const MESES = {
@@ -47,11 +51,32 @@ const Meses = ({ usuarios }) => {
   const pedidosFiltrados = pedidos.filter((pedido) => {
     const numeroDelMesDelPedido = pedido.dia.getMonth(); // Obtiene el número del mes del pedido (0-11)
     const numeroDelMesSeleccionado = MESES[mesSeleccionado]; // Obtiene el número del mes seleccionado (0-11) del diccionario MESES
+    const añoDelPedido = pedido.dia.getFullYear(); // Obtiene el año del pedido
     return (
       pedido.usuarioId === Number(usuarioSeleccionado) && // Verifica si el usuario del pedido coincide con el usuario seleccionado
-      numeroDelMesDelPedido === numeroDelMesSeleccionado // Verifica si el mes del pedido coincide con el mes seleccionado
+      numeroDelMesDelPedido === numeroDelMesSeleccionado && // Verifica si el mes del pedido coincide con el mes seleccionado
+      añoSeleccionado === añoDelPedido // Verifica si el año del pedido coincide con el año seleccionado
     );
   });
+
+  // añoSeleccionado
+
+  const manejarCambio = (evento) => {
+    setAñoSeleccionado(evento.target.value);
+  };
+
+  // ---Muestra los años en el selector---
+  const generarOpcionesDeAño = () => {
+    let años = [];
+    for (let i = añoActual - 3; i <= añoActual + 4; i++) {
+      años.push(
+        <option key={i} value={i}>
+          {i}
+        </option>,
+      );
+    }
+    return años;
+  };
 
   return (
     <>
@@ -76,8 +101,10 @@ const Meses = ({ usuarios }) => {
         </div>
 
         {/* Selector de años */}
-        <div>
-          <AñoSelector />
+        <div className="selectorAño contenedor">
+          <select id="años" value={añoSeleccionado} onChange={manejarCambio}>
+            {generarOpcionesDeAño()}
+          </select>
         </div>
         {/* Selector de mes */}
         <div className="contenedor">
@@ -176,7 +203,7 @@ const Meses = ({ usuarios }) => {
           pedidosFiltrados.length == 0 &&
           usuarioSeleccionado != '' && (
             <p className="textoParaElUsuario">
-              El perfil seleccionado no tiene pedidos en {mesSeleccionado}.
+              El perfil seleccionado no tiene pedidos en {mesSeleccionado} del {añoSeleccionado}
             </p>
           )}
 

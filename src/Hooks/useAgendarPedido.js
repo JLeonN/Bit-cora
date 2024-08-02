@@ -37,14 +37,17 @@ const useAgendarPedido = () => {
   };
 
   // ---Muestra el día en el programa---
-  const today = new Date().toLocaleDateString('es-ES', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-  });
+  // const today = new Date().toLocaleDateString('es-ES', {
+  //   day: '2-digit',
+  //   month: '2-digit',
+  //   year: 'numeric',
+  // });
+
+
 
   // ---Prepara la estructuración de datos para guardar---
   const guardarInfo = () => {
+    const today = new Date();
     const nuevoDia = {
       dia: today,
       numeroBoleta,
@@ -84,7 +87,7 @@ const useAgendarPedido = () => {
     usuarioSeleccionado,
     manejarCambioInput,
     guardarInfo,
-    dias,
+    pedidos: dias,
     usuarios,
   };
 };

@@ -7,28 +7,26 @@ import AñoSelector from './AñoSelector';
 const Meses = ({ usuarios }) => {
   const [mesSeleccionado, setMesSeleccionado] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
-  const [mesNumero, setMesNumero] = useState('');
 
-  // Diccionario
+  // Diccionario, mapa, objeto
   const MESES = {
-    "Enero": 1,
-    "Febrero": 2,
-    "Marzo": 3,
-    "Abril": 4,
-    "Mayo": 5,
-    "Junio": 6,
-    "Julio": 7,
-    "Agosto": 8,
-    "Septiembre": 9,
-    "Octubre": 10,
-    "Noviembre": 11,
-    "Diciembre": 12
+    Enero: 0,
+    Febrero: 1,
+    Marzo: 2,
+    Abril: 3,
+    Mayo: 4,
+    Junio: 5,
+    Julio: 6,
+    Agosto: 7,
+    Septiembre: 8,
+    Octubre: 9,
+    Noviembre: 10,
+    Diciembre: 11,
   };
 
   // Selector de meses
   const manejarClicMes = (mes) => {
     setMesSeleccionado(mes);
-    console.log("MES", MESES [mes]);
   };
 
   const manejarCambioUsuario = (e) => {
@@ -42,12 +40,31 @@ const Meses = ({ usuarios }) => {
     notas,
     manejarCambioInput,
     guardarInfo,
-    dias,
+    pedidos,
   } = useAgendarPedido();
 
-  const diasFiltrados = dias.filter(
-    (dia) => dia.usuarioId === Number(usuarioSeleccionado),
+
+
+// Trabajando con pablo
+
+  const pedidosFiltrados = pedidos.filter(
+    (pedido) => {
+      const numeroDelMesDelPedido = pedido.dia.getMonth();
+      const numeroDelMesSeleccionado = MESES[mesSeleccionado]
+      return (
+        pedido.usuarioId === Number(usuarioSeleccionado)
+        &&
+        numeroDelMesDelPedido === numeroDelMesSeleccionado
+      );
+    }
   );
+  console.log('Pedidos', pedidosFiltrados);
+
+
+
+
+
+
   return (
     <>
       <div className="horizontal">
@@ -165,7 +182,7 @@ const Meses = ({ usuarios }) => {
             Debe seleccionar un perfiles
           </p>
         )}
-        <DiasTabla mes={mesSeleccionado} dias={diasFiltrados} />
+        <DiasTabla mes={mesSeleccionado} dias={pedidosFiltrados} />
       </section>
     </>
   );

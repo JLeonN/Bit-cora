@@ -18,7 +18,13 @@ const DiasTabla = ({ mes, dias }) => {
           <tbody>
             {dias.map((dia, index) => (
               <tr key={index}>
-                <td>{dia.dia}</td>
+                <td>
+                  {dia.dia.toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                  })}
+                </td>
                 <td>{dia.numeroBoleta}</td>
                 <td>{dia.cantidadItems}</td>
                 <td>{dia.cantidadItemsNegados}</td>

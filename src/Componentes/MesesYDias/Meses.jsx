@@ -43,13 +43,13 @@ const Meses = ({ usuarios }) => {
     pedidos,
   } = useAgendarPedido();
 
-  
+  // Filtra los pedidos para mostrar solo aquellos que pertenecen al usuario seleccionado y que corresponden al mes seleccionado.
   const pedidosFiltrados = pedidos.filter((pedido) => {
-    const numeroDelMesDelPedido = pedido.dia.getMonth();
-    const numeroDelMesSeleccionado = MESES[mesSeleccionado];
+    const numeroDelMesDelPedido = pedido.dia.getMonth(); // Obtiene el número del mes del pedido (0-11)
+    const numeroDelMesSeleccionado = MESES[mesSeleccionado]; // Obtiene el número del mes seleccionado (0-11) del diccionario MESES
     return (
-      pedido.usuarioId === Number(usuarioSeleccionado) &&
-      numeroDelMesDelPedido === numeroDelMesSeleccionado
+      pedido.usuarioId === Number(usuarioSeleccionado) && // Verifica si el usuario del pedido coincide con el usuario seleccionado
+      numeroDelMesDelPedido === numeroDelMesSeleccionado // Verifica si el mes del pedido coincide con el mes seleccionado
     );
   });
 
@@ -166,10 +166,20 @@ const Meses = ({ usuarios }) => {
         />
 
         {usuarioSeleccionado == '' && (
-          <p className="seleccionePerfil" colSpan={5}>
-            Debe seleccionar un perfiles
-          </p>
+          <p className="textoParaElUsuario">Debe seleccionar un perfiles</p>
         )}
+
+        {mesSeleccionado == '' && usuarioSeleccionado != '' && (
+          <p className="textoParaElUsuario">Debe seleccionar un mes.</p>
+        )}
+        {mesSeleccionado != '' &&
+          pedidosFiltrados.length == 0 &&
+          usuarioSeleccionado != '' && (
+            <p className="textoParaElUsuario">
+              El perfil seleccionado no tiene pedidos en {mesSeleccionado}.
+            </p>
+          )}
+
         <DiasTabla mes={mesSeleccionado} dias={pedidosFiltrados} />
       </section>
     </>

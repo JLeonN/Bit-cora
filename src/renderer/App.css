@@ -154,6 +154,14 @@ button:hover {
   justify-content: space-evenly;
 }
 /* ////////////////////////// */
+/* Texto para el usuario */
+.textoParaElUsuario {
+  color: var(--TextoLink);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* ////////////////////////// */
 /* --------------------------------------------------------------------------------------------------------------- */
 
 /* ---NavBar--- */
@@ -297,12 +305,6 @@ h1 {
   .mes {
     flex: 1 0 50%; /* Ajuste para 2 columnas */
   }
-}
-.seleccionePerfil {
-  color: var(--TextoLink);
-  font-size: 30px;
-  text-align: center;
-  margin-top: 10px;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
@@ -649,7 +651,7 @@ input[type='text'] {
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 
- /* Selector de años */
+/* Selector de años */
 
 .selectorAño {
   display: flex;
@@ -669,3 +671,4 @@ input[type='text'] {
 .selectorAño select:hover {
   background-color: var(--TituloH1);
 }
+/* --------------------------------------------------------------------------------------------------------------- */

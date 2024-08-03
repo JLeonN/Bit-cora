@@ -1,10 +1,9 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import useAgendarUsuarios from '../Hooks/useAgendarUsuarios';
 import Nav from '../Componentes/NavBar/Nav';
 import Estructura from '../Estructura';
 import Footer from '../Componentes/Footer/Footer';
-import Inicio from '../Paginas/Inicio';
 
 export default function App() {
   const {
@@ -16,7 +15,7 @@ export default function App() {
   } = useAgendarUsuarios();
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Nav usuarios={usuarios} />
         <Estructura
           valorInput={valorInput}
@@ -25,9 +24,8 @@ export default function App() {
           usuarios={usuarios}
           borrarUsuario={borrarUsuario}
         />
-        <Inicio usuarios={usuarios} />
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

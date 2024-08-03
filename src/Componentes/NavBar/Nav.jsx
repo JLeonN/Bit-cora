@@ -13,7 +13,7 @@ const Nav = ({ usuarios }) => {
                 <Link to="/">Inicio</Link>
               </li>
               <li>
-                <Link to="/AgendarUsuarios">Agendar perfiles</Link>
+                <Link to="/AgendarUsuarios">Agregar perfile</Link>
               </li>
               <li>
                 <SelectorDeUsuarios usuarios={usuarios} />

@@ -197,7 +197,7 @@ const Meses = ({ usuarios }) => {
         )}
 
         {mesSeleccionado == '' && usuarioSeleccionado != '' && (
-          <p className="textoParaElUsuario">Debe seleccionar un mes.</p>
+          <p className="textoParaElUsuario">Seleccione un mes</p>
         )}
         {mesSeleccionado != '' &&
           pedidosFiltrados.length == 0 &&
